@@ -1,0 +1,6 @@
+<h2>Your absence</h2>
+<% if @absence.document_content_type == "application/pdf" %>
+  <%= link_to "Download", @absence.document.url %>
+<% else %>
+  <%= image_tag @absence.document.url  %>
+<% end %>
